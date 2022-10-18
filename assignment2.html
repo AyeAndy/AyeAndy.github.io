@@ -4,7 +4,7 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Example Student's HCDE 439 Physical Computing Page!</title> 
+        <title>HCDE533 Digital Fabrication Documentation</title> 
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
@@ -12,14 +12,92 @@
     <body> 
 
         <div class="header">
-            <h1>Example Student's Assignment 2!</h1>
+            <h1>Flight & Mermation</h1>
+            </h2>Grasshopper Definitions: Bird-like Creatures</h2>
             <p>
-            <img src="red-panda.jpg" width=400></a>
+            <img src="img/assignment2/avian3.jpg" width=800></a>
             </p>
             <p>
-            Here is all the documentation for assignment 2!
+            I originally wanted to start out the assignment by working on something that would look like a leaf, that I could piece together.
+            However, the shapes that I intended to create (by my own lack of expertise in grasshopper) devolved into more so of simple curvatures,
+            that when formed together reminded me of movements and forms of creatures in flight.
+            </p>
+            <p>
+                <img src="img/assignment2/curve.png" width=600></a>
+                </p>
+                <p>
+                <img src="img/assignment2/joining_curves.png" width=600></a>
+            </p>
+            <p>
+            To create these curves that would fit together, I wanted to play around with randomly generated numbers. I had a grandiose idea of
+            creating randomly shaped curves by defining random positions of 3 points; however, due to time constraints, I couldn't quite figure out
+            how to randomize the point positions in each bake. Instead, manual specifications of the points via Rhino or Grasshopper is required.
+
+            I also found about NURBS curve, which helped me create a closed curve on my intitially generated curve. I joined them together
+            at their endpoints and filleted the edges so that it wouldn't come out so sharp when I laser cut it.
+            </p>
+            <p>
+                <img src="img/assignment2/parameterize_curve.png" width=600></a>
+            </p>
+            <p>
+            I had the curves, but I wanted to figure out a way to find points on a curves so that I can map my rectangles on them.
+            Luckily, I found a video online explaining how to parameterize curves so that I can randomize points on surfaces of the curves.
+            Using the numbers sliders, I was now able to specify the point on a curve in which I could place my rectangle (slot) on.
+            </p>
+            <p>
+                <img src="img/assignment2/drawing_rectangle.png" width=600></a>
+                </p>
+                <p>
+                <img src="img/assignment2/rotate_rectangle.png" width=600></a>
+            </p>
+            <p>
+            I specified the rectangle width to be 2.6 - the width of the cardboard that I measured in my previous assignment. The problem came
+            when I had to rotate the rectangle. Luckily, the curve eval component provided me with a tangential vector at a point, which I used
+            with combination of a normal vector to calculate the angle. I then used that calculation to rotate my rectangle to be orthogonal
+            of the curvature.
+            </p>
+            <p>
+            <img src="img/assignment2/rhino_overview.png" width=600></a>
+            </p>
+            <p>
+            I then went ahead to duplicate these three points onto the two curves that I had created, to create shapes with either
+            2 or 3 slots. In order for future users who are using this grasshopper file to generate the shapes, they would just need
+            to specify the point positions, and parameter values for the rectangle positions along the curve.
+
+            These particular values had to be adjusted to account for overlaps.
+            </p>
+            <p>
+            <img src="img/assignment2/avian1.jpg" width=600></a>
+            <img src="img/assignment2/avian2.jpg" width=600></a>
+            <img src="img/assignment2/avian3.jpg" width=600></a>
+            </p>
+            <p>
+            I laid out the pieces out onto a table, in a random arrangement. And in that moment, the dynamic curvatures seemed to desire to move.
+            Lifting them up them up high in the air with my hands, I imagined flocks of winged creatures coming together in a communion, forming a
+            larger, chaotic but coordinated schools that took flight from my fingertips.
+            </p>
+            <p>
+            <img src="img/assignment2/avian4.jpg" width=600></a>
+            <img src="img/assignment2/avian5.jpg" width=600></a>
+            </p>
+            <p>
+                <b>Documentation for Assignment 2:</b>
+                <br>
+                <a href="img/assignment2/assignment2.ai">Adobe Illustrator file</a>
+                <br>
+                <a href="img/assignment2/assignment2.3dm">Rhino file</a>
+                <br>
+                <a href="img/assignment2/assignment2.gh">Grasshopper File</a>
+                <br>
+            </p>
+            <p>
+                <b>Credits:</b>
+                <br>
+                <a href="https://www.youtube.com/watch?v=xIpY2NRb1u0&ab_channel=KoryBieg">Different types of curves in rhino</a>
+                <br>
+                <a href="https://www.youtube.com/watch?v=sB0kRYNbLG0">How to find points on a curve in Rhino</a>
+                <br>
             </p>
         </div>
-        
     </body>
 </html>
