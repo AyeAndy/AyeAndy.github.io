@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>HCDE533 Digital Fabrication Documentation</title> 
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head> 
+    <body> 
+
+        <div class="header">
+            <h1>Final Project: Music Box</h1>
+
+            <p>
+                For my final project, I decided to create a music box and test efficacies of digitally fabricating musical instruments or artifacts.
+            </p>
+
+            <img src="img/final/2.png" width=1200></a>
+            <br>
+            <img src="img/final/3.png" width=1200></a>
+
+            <p>
+                For this project, I used techniques that included 3d printing, grasshopper, laser cutting, and press-fit construction.
+                Detailed project specifications can be found in my <a href="./assignment7.html">Final Project Proposal</a>.
+                <br>
+                <br>
+                I based much of my designs from a previously existing stl online of a <a href="https://www.thingiverse.com/thing:72787">Super Mario Music Box</a> to make
+                this assignment easier.
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>Customized Music Cylinder</h3>
+            
+            <img src="img/final/5.png" width=1200></a>
+            <br>
+
+            <p>
+                The music cylinder was programmed in grasshopper. The pointcloud generated from my notes CSV was then be transformed
+                and applied to a cylinder solid polysurface, which createed extrusions on the cylinder for the note delineation.
+                <br>
+                <br>
+                Originally, I wanted to leverage flat.io's API to convert my custom music notation into data points using Python so that
+                the translational work would become a lot easier. However, due to time constraints, I conducted manual calculations in spreadsheet
+                format.
+            </p>
+
+            <img src="img/final/14.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/6.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/7.png" width=1200></a>
+            <br>
+            <br>
+
+            <p>
+                After doing some calculations in Google Spreadsheet, I mapped out the points into a coordinate point system in Grasshopper. I created a mesh
+                that resembles the tick marks on the music cylinders and assigned them to the points, which then was mapped onto a cylinder using the 
+                FlowOnSrf command in Rhino.
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>Cylinder Mesh & Fit</h3>
+
+            <img src="img/final/17.png" width=1200></a>
+            <br>
+
+            <p>
+                I wanted to make the music box customization easier  - I wanted to allow someone else to easily print out and assemble the music box. The stl
+                that I used was difficult to assemble, and lacked some aspects of easy construction.
+            </p>
+
+            <img src="img/final/12.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/9.png" width=1200></a>
+
+            <p>
+                To make assembling easier, I modified the mesh in the stl that allowed the music cylinder to stay in plalce with a dowel-based system. With this,
+                the user can simply remove the cylinder from the slots inserted.
+            </p>
+            
+
+            <img src="img/final/11.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/16.png" width=1200></a>
+
+            <p>
+                For the cylinder to rotate without the compression-based system of the original stl file, I decided to create a slot within the cylinder
+                that would allow for a dowel to be inserted. The dowel also included extensions to allow the cylinder to rotate around, as the cogs were
+                already attached the to the cylinder itself.
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>Music Box Exterior</h3>
+
+            <img src="img/final/18.png" width=1200></a>
+
+            <p>
+                Originally, I planned to have the whole exterior of the music box constructed in cardboard; however, due to the cardboard not being able to handle
+                forces and stresses produced by cogwheel rotation, I decided to adjust and took a hybrid appraoch.
+            </p>
+
+            <img src="img/final/19.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/20.png" width=1200></a>
+            <br>
+            <br>
+            <img src="img/final/22.png" width=1200></a>
+
+            <p>
+                After modeling in Rhino, I laser cut the cardboard base and side panel. This hybrid approach of PLA and cardboard exterior allowed the music box
+                to still handle the forces produced by cogwheel rotations.
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>Music Box Comb</h3>
+
+            <img src="img/final/23.png" width=1200></a>
+
+            <p>
+                I had originally planned to order a music box comb instead of making one myself by milling out brass sheets. However, the music box comb that arrived
+                was too small to be feasibly fit into the 3d printed music box exteriors. To save time, I decided to use the originally 3d printed music box's comb.
+                I was not able to meet my stretch goal of milling out my custom music box comb.
+            </p>
+
+            <img src="img/final/27.png" width=1200></a>
+
+            <p>
+                The downside to this approach is that I wouldn't be able to tune the comb at all. I did not account for the ways in which I could tune the comb, but
+                using approaches like metal bar to stop each tick of the comb could potentially be helpful in the future.
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h3>Music Box</h3>
+
+            <img src="img/final/26.png" width=1200></a>
+
+            <video width="1200" height="900" controls>
+                <source src="musicbox_lower.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <p>
+                The final construction of the music box is shown above. It is extremely out of tune, but does play various notes, which I think could be a test on
+                the efficacy of printing out musical artifacts through digital fabrication methods.
+            </p>
+
+            <p>
+                <b>Documentation for Final Project:</b>
+                <br>
+                <a href="https://www.notion.so/cf8ec05b02d547c9a5d5bf8f0ba08717?v=4a93c0f1ceae4da7b68e8c996430ce62">Notion Docs for Contingency Plan & Bill of Materials</a>
+                <br>
+                <a href="img/final/Musicbox.3dm">Rhino File</a>
+                <br>
+                <a href="img/final/musicbox.gh">Grasshopper File</a>
+                <br>
+                <a href="img/final/outer_box.AI">Illustrator Laser Cut File</a>
+                <br>
+                <a href="img/final/musicbox_lower.mov">Music Box Construction Video</a>
+                <br>
+            </p>
+
+            <p>
+                <b>Credits:</b>
+                <br>
+                <a href="https://www.thingiverse.com/thing:72787">Super Mario Music Box</a>
+                <br>
+            </p>
+        </div>
+    </body>
+</html>
